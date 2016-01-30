@@ -56,7 +56,8 @@ favoriteThings.book = "50 Shades of Gray";
 
 
 
-/*Create an empty Object called backPack. Now, create a variable called 'item'
+/*Create an empty Object called backPack. Now, create a variable 
+//called 'item'
 and set it equal to the string 'firstPocket'. Using bracket notation,
 add a 'firstPocket' key (or property) to backPack, using 'item'.
 Set the value of that key to 'chapstick'.
@@ -64,17 +65,49 @@ Set the value of that key to 'chapstick'.
 Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
 
-  //Code here
+var backPack = {};
+var item = "firstPocket";
+
+backPack[item] = "chapstick";
 
 //After you do the above, alert your entire backPack object.
 
-  //Code here
+alert(backPack);
 
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. */
 
-  //Code here
+console.log(backPack);
+
+
+
+//NEXT PROBLEM
+
+
+
+
+//Create an 'alsoMe' object with the following properties name, 
+//age, height, gender, married, eyeColor, hairColor. Fill those 
+//properties in with the appropriate values.
+
+var alsoMe = {
+  name: "Alex",
+  age: 21,
+  height: "6'0",
+  gender: "male",
+  married: "single",
+  eyeColor: "blue",
+  hairColor: "brown"
+};
+
+//Now, loop through your object and alert every value. 
+//*Tyler --> 24 --> 6'0 --> Male, etc etc
+
+for (var prop in alsoMe) {
+  alert(alsoMe[prop]);
+}
+
 
 
 
@@ -84,29 +117,22 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 
 
-//Create an 'alsoMe' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
+//Create an Object called 'album' with 5 keys named different song 
+//titles that you make up, with the values being the length of each song.
 
-  //Code Here
-
-//Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
-
-  //Code Here
-
-
-
-
-//NEXT PROBLEM
-
-
-
-
-//Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
-
-  //Code Here
+var album = {
+  beautifulDay: 3,
+  singASong: 2.4,
+  track3: 4.6,
+  track4: 1.5,
+  finalTrack: 2.8
+};
 
 //Now, loop through your album object alerting every song title individually.
 
-  //Code Here
+for (var prop in album) {
+  alert([prop]);
+}
 
 
 
@@ -116,13 +142,25 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 
 
-//Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
+//Create an object called states that has 5 US states as properties 
+//with the values being their population (doesn't have to be accurate).
 
-  //Code Here
+var states = {
+  virginia: 1235334,
+  utah: 656334232,
+  oregon: 5346543453,
+  washington: 29999,
+  colorado: 5
+};
 
-//Now, loop through your states object and if the states population is greater than 30K, alert that state.
+//Now, loop through your states object and if the states population is 
+//greater than 30K, alert that state.
 
-  //Code Here
+for (var prop in states) {
+  if (states[prop] > 30000) {
+    alert([prop]);
+  }
+}
 
 
 
@@ -139,13 +177,34 @@ var user1 = {
     birthday: undefined,
     username: 'tylermcginnis33',
     age: 0
+};
+//added a semicolon at the end because the original file left it out
+
+/*Above you're given a user object. Loop through the user 
+object checking to make surethat each value is truthy. 
+If it's not truthy, remove it from the object. */
+
+
+for (var prop in user1) {
+  if (user1[prop] === null || undefined || "" || 0 || false || NaN) {
+    delete user1[prop];
+  }
 }
-/*Above you're given a user object. Loop through the user object checking to make sure
-that each value is truthy. If it's not truthy, remove it from the object. */
 
-  //Code Here
+//trial 2
+// for (Var prop in user1) {
+//   if (typeof user1[prop] === false) {
+//     delete user1[prop];
+//   }
+// }
 
-//Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
+//NOT RIGHT!!!!!!!!
+
+
+
+//Once you get your truthy Object, Change the remaining values in the 
+//object to be specific to you (name: 'your name', username: 
+//'your username'), rather than my information.
 
   //Code Here
 
@@ -168,14 +227,18 @@ var user2 = {
             alert('Email is : ' + this.email);
         }
 };
-//Let's say I, the user, decided to change my name and email address to the following
-// name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
+//Let's say I, the user, decided to change my name and email address to 
+//the following
+// name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. 
+//Make that change.
 
-  //Code Here
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
 
-//Now call the sayName method that's on the user object which will alert the users email
+//Now call the sayName method that's on the user object which will 
+//alert the users email
 
-  //Code Here
+user2.sayName();
 
 
 
