@@ -273,15 +273,14 @@ methodCollection.logHello();
 //information that you passed in.
 
 function MakePerson(name, birthday, ssn) {
-  var newObj = {
+  return {  // as long as you put curly bracket, it will return object without declaring a variable for an object
     name: name,
     birthday: birthday,
     ssn: ssn
   };
-  return newObj;
 }
 
-MakePerson();
+// var me = MakePerson("alex", "10-13", "123456");
 
 
 
@@ -293,9 +292,13 @@ MakePerson();
 //it needs to make a Credit Card object and returns that object so 
 //that whenever you invoke MakeCard, you get a brand new credit card.
 
-function MakeCard() {
-  var creditCard = {};
-  return creditCard;
+function MakeCard(number, sn, expirationDate, name) {
+  return {
+    number: number,
+    sn: sn,
+    expirationDate: expirationDate,
+    name: name
+  };
 }
 
   
@@ -305,8 +308,9 @@ function MakeCard() {
 
 
 
-/* As of this point you should have a MakePerson and a MakeCard function 
-which returns you either a person or a credit card object.
+/* 
+   As of this point you should have a MakePerson and a MakeCard function 
+   which returns you either a person or a credit card object.
    Now, create a bindCard function that takes in a person object as its 
    first parameter and a creditcard object as its second parameter.
    Have bindCard merge the two parameters together into a new object 
@@ -314,11 +318,13 @@ which returns you either a person or a credit card object.
    creditcard.
 */
 
-function bindCard(person, creditcard) {
-  var mergeObj = {};
-  return mergeObj;
+function bindCard(user, card) {
+  for (var key in card) {
+    user[key] = card[key]; // adds properties of card to user without replacing
+  }
+  return user;
 }
 
-//NOT RIGHT, FIX
+
 
 
