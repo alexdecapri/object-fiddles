@@ -314,7 +314,7 @@ which returns you either a person or a credit card object.
    creditcard.
 */
 
-function bindCard(newObj, creditCard) {
+function bindCard(person, creditcard) {
   var mergeObj = {};
   return mergeObj;
 }
