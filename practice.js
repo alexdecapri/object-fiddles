@@ -186,19 +186,11 @@ If it's not truthy, remove it from the object. */
 
 
 for (var prop in user1) {
-  if (user1[prop] === null || undefined || "" || 0 || false || NaN) {
+  if (!user1[prop]) {
     delete user1[prop];
   }
 }
 
-//trial 2
-// for (Var prop in user1) {
-//   if (typeof user1[prop] === false) {
-//     delete user1[prop];
-//   }
-// }
-
-//NOT RIGHT!!!!!!!!
 
 
 
