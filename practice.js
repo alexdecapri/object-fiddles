@@ -1,9 +1,16 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
 
 
-//Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
+//Create an object called me. Give it a key of name with the 
+//value being your name, and another key of age with the value 
+//being your age. Then alert your name using dot notation.
 
-  //Code here
+var me = {
+  name :"Alex",
+  age: 21
+};
+
+alert(me.name);
 
 
 
@@ -13,19 +20,34 @@
 
 
 
-//Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
+//Make a 'favoriteThings' object that contains the following keys: 
+//band, food, person, book, movie, holiday. Have the values to 
+//those keys be your favorite thing in that category.
 
-  //Code here
+var favoriteThings = {
+  band: "Coldplay",
+  food: "pasta",
+  person: "George Washington",
+  book: "Random Title",
+  movie: "Random Movie",
+  holiday: "birthday"
+};
 
 
-//After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
+//After you've made your object, add another key named 'car' with 
+//the value being your favorite car and then another key 
+//named 'brand' with the value being your favorite brand.
 
-  //Code here
+favoriteThings.car = "Maserati";
+favoriteThings.brand = "Phar North";
 
 
-//Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
+//Now change the food key in your favoriteThings object to be 
+//'Lettuce' and change the book key in your favoriteThings 
+//object to be '50 Shades of Gray'.
 
-  //Code here
+favoriteThings.food = "Lettuce";
+favoriteThings.book = "50 Shades of Gray";
 
 
 
